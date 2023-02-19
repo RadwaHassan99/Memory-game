@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/confetti.css">
+    <title>Memory-Matching game</title>
+</head>
+<body>
+    <div class="info-container">
+        <div class="name">
+            Hello: <span id="name"></span>
+        </div>
+
+        <div class="tries">
+            wrong Tries: <span id="tries">0</span>
+        </div>
+    </div>
+
+    <div class="control">
+        <button onclick="Start()" id="start">start</button>
+        <p id="counter"></p>
+    </div>
+
+    <div class="game-blocks-container">
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="banda">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/banda.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="banda">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/banda.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="bird">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/bird.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="bird">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/bird.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="cat">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/cat.png"></div>
+            </div>
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="cat">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/cat.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="elephant">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/elephant.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="elephant">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/elephant.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="kwala">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/kwala.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="kwala">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/kwala.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="lamb">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/lamb.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="lamb">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/lamb.png"></div>
+            </div>
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="penguin">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/penguin.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="penguin">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/penguin.png"></div>
+            </div>  
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="rabbit">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/rabbit.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="rabbit">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/rabbit.png"></div>
+            </div>
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="tiger">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/tiger.png"></div>
+            </div>
+        </div>
+
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="tiger">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/tiger.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="turtle">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/turtle.png"></div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" data-technology="turtle">
+                <div class="flip-card-front">?</div>
+                <div class="flip-card-back"><img src="images/turtle.png"></div>
+            </div>
+        </div>
+    </div>
+    <div id="end">
+    </div>
+    <div class="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+    <div>
+        <input type="button" value="Try Again" onClick="window.location.reload(true)" id="reload">
+    </div>
+    <script src="script/index.js"></script>
+</body>
+</html>
